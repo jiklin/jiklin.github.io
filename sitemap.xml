@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hxue.me/404.html</loc>
+    <lastmod>2015-08-20T06:05:32.498Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hxue.me/2015/08/usefull.html</loc>
     <lastmod>2015-08-20T05:57:49.798Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://hxue.me/2015/08/mailto.html</loc>
     <lastmod>2015-08-20T05:48:04.035Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hxue.me/404.html</loc>
-    <lastmod>2015-08-20T05:29:27.093Z</lastmod>
   </url>
   
 </urlset>
