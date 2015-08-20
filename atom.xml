@@ -64,7 +64,7 @@
     <link href="http://hxue.me/2015/08/mailto.html"/>
     <id>http://hxue.me/2015/08/mailto.html</id>
     <published>2015-08-20T05:47:36.000Z</published>
-    <updated>2015-08-20T05:48:04.035Z</updated>
+    <updated>2015-08-20T08:47:42.979Z</updated>
     <content type="html"><![CDATA[<p><code>a</code>标签的<code>href</code>属性允许我们方便地调用本地默认邮件客户端发送邮件</p>
 <h2 id="如何使用mailto?">如何使用mailto?</h2><p>基本用法<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"mailto:sample@163.com"</span>&gt;</span>send email<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>或者<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">action</span>=<span class="value">"mailto:sample@163.com"</span>&gt;</span><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
@@ -118,7 +118,7 @@
     <link href="http://hxue.me/2015/08/usefull.html"/>
     <id>http://hxue.me/2015/08/usefull.html</id>
     <published>2015-08-20T05:42:33.000Z</published>
-    <updated>2015-08-20T05:57:49.798Z</updated>
+    <updated>2015-08-20T07:59:40.204Z</updated>
     <content type="html"><![CDATA[<p><img src="/upload/tank.jpg" alt=""></p>
 <p>上网中经常无意发现一些有趣的技术类网站或者博客，生怕遗忘，特立文记录下来，以备不时之需。</p>
 <a id="more"></a>

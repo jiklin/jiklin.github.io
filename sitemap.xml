@@ -2,23 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hxue.me/2015/08/mailto.html</loc>
+    <lastmod>2015-08-20T08:47:42.979Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/tags/index.html</loc>
+    <lastmod>2015-08-20T08:29:42.322Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/about/index.html</loc>
+    <lastmod>2015-08-20T08:00:10.042Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/2015/08/usefull.html</loc>
+    <lastmod>2015-08-20T07:59:40.204Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hxue.me/404.html</loc>
     <lastmod>2015-08-20T06:05:32.498Z</lastmod>
   </url>
   
   <url>
-    <loc>http://hxue.me/2015/08/usefull.html</loc>
-    <lastmod>2015-08-20T05:57:49.798Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://hxue.me/2015/08/gitignore.html</loc>
     <lastmod>2015-08-20T05:51:18.834Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hxue.me/2015/08/mailto.html</loc>
-    <lastmod>2015-08-20T05:48:04.035Z</lastmod>
   </url>
   
 </urlset>
