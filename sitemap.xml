@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hxue.me/2015/08/hello-world.html</loc>
-    <lastmod>2015-08-20T03:38:41.963Z</lastmod>
+    <loc>http://hxue.me/2015/08/usefull.html</loc>
+    <lastmod>2015-08-20T05:57:49.798Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/2015/08/gitignore.html</loc>
+    <lastmod>2015-08-20T05:51:18.834Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/2015/08/mailto.html</loc>
+    <lastmod>2015-08-20T05:48:04.035Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/404.html</loc>
+    <lastmod>2015-08-20T05:29:27.093Z</lastmod>
   </url>
   
 </urlset>

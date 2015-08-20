@@ -4,7 +4,7 @@
   <subtitle><![CDATA[好好学习 天天向上]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://hxue.me/"/>
-  <updated>2015-08-20T03:38:41.963Z</updated>
+  <updated>2015-08-20T05:51:18.834Z</updated>
   <id>http://hxue.me/</id>
   
   <author>
@@ -15,24 +15,144 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://hxue.me/2015/08/hello-world.html"/>
-    <id>http://hxue.me/2015/08/hello-world.html</id>
-    <published>2015-08-20T03:38:41.963Z</published>
-    <updated>2015-08-20T03:38:41.963Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <title><![CDATA[gitignore不完全说明]]></title>
+    <link href="http://hxue.me/2015/08/gitignore.html"/>
+    <id>http://hxue.me/2015/08/gitignore.html</id>
+    <published>2015-08-20T05:49:36.000Z</published>
+    <updated>2015-08-20T05:51:18.834Z</updated>
+    <content type="html"><![CDATA[<p><code>.gitignore</code>配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利，以下是个人对于配置 .gitignore 的一些心得。<br><a id="more"></a></p>
+<h2 id="配置语法">配置语法</h2><ul>
+<li>以斜杠<code>/</code>开头表示目录；</li>
+<li>以星号<code>*</code>通配多个字符；</li>
+<li>以问号<code>?</code>通配单个字符</li>
+<li>以方括号<code>[]</code>包含单个字符的匹配列表；</li>
+<li>以叹号<code>!</code>表示不忽略(跟踪)匹配到的文件或目录；</li>
+</ul>
+<blockquote>
+<p>此外，git 对于 .ignore 配置文件是按行从上到下进行规则匹配的，意味着如果前面的规则匹配的范围更大，则后面的规则将不会生效；</p>
+</blockquote>
+<h2 id="示例">示例</h2><ul>
+<li>示例1<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fd1/<span class="keyword">*</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明：忽略目录 <code>fd1</code> 下的全部内容；注意，不管是根目录下的 <code>/fd1/</code> 目录，还是某个子目录 <code>/child/fd1/</code> 目录，都会被忽略；</p>
+<ul>
+<li>示例2<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/fd1/</span>*</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明：忽略根目录下的 /fd1/ 目录的全部内容；</p>
+<ul>
+<li>示例3<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"><span class="change">!.gitignore</span></span><br><span class="line"><span class="change">!/fw/bin/</span></span><br><span class="line"><span class="change">!/fw/sf/</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>说明：忽略全部内容，但是不忽略 .gitignore 文件、根目录下的 /fw/bin/ 和 /fw/sf/ 目录；</p>
+<p>原文链接:<a href="http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html" target="_blank" rel="external">http://www.cnblogs.com/haiq/archive/2012/12/26/2833746.html</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    <![CDATA[<p><code>.gitignore</code>配置文件用于配置不需要加入版本管理的文件，配置好该文件可以为我们的版本管理带来很大的便利，以下是个人对于配置 .gitignore 的一些心得。<br>]]>
+    
     </summary>
+    
+      <category term="git" scheme="http://hxue.me/tags/git/"/>
+    
+      <category term="gitignore" scheme="http://hxue.me/tags/gitignore/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MailTo的用法]]></title>
+    <link href="http://hxue.me/2015/08/mailto.html"/>
+    <id>http://hxue.me/2015/08/mailto.html</id>
+    <published>2015-08-20T05:47:36.000Z</published>
+    <updated>2015-08-20T05:48:04.035Z</updated>
+    <content type="html"><![CDATA[<p><code>a</code>标签的<code>href</code>属性允许我们方便地调用本地默认邮件客户端发送邮件</p>
+<h2 id="如何使用mailto?">如何使用mailto?</h2><p>基本用法<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"mailto:sample@163.com"</span>&gt;</span>send email<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">action</span>=<span class="value">"mailto:sample@163.com"</span>&gt;</span><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><code>mailto</code>后边跟的是收信人，当然还有一些其它的参数可用，如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名称</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">to</td>
+<td>收信人</td>
+</tr>
+<tr>
+<td style="text-align:center">subject</td>
+<td>主题</td>
+</tr>
+<tr>
+<td style="text-align:center">cc</td>
+<td>抄送</td>
+</tr>
+<tr>
+<td style="text-align:center">bcc</td>
+<td>暗抄送</td>
+</tr>
+<tr>
+<td style="text-align:center">body</td>
+<td>内容</td>
+</tr>
+</tbody>
+</table>
+<p>参数的传递方法同URL传值一样，针对上边2中用法分别是</p>
+<h3 id="QueryString_方式">QueryString 方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"mailto:sample@163.com?subject=test&amp;cc=sample@hotmail.com&amp;body=use mailto sample"</span>&gt;</span>send email<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Form_方式">Form 方式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">form</span> <span class="attribute">name</span>=<span class="value">"sendmail"</span> <span class="attribute">action</span>=<span class="value">"mailto:sample@163.com"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"cc"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"sample@hotmail.com"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"subject"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"test"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">name</span>=<span class="value">"body"</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">value</span>=<span class="value">"use mailto sample"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p><code>a</code>标签的<code>href</code>属性允许我们方便地调用本地默认邮件客户端发送邮件</p>
+<h2 id="如何使用mailto?">如何使用mailto?</h2><p>基本用法<br><figure class="highlight h]]>
+    </summary>
+    
+      <category term="html" scheme="http://hxue.me/tags/html/"/>
+    
+      <category term="mailto" scheme="http://hxue.me/tags/mailto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[常用的一些技术网站(博客)]]></title>
+    <link href="http://hxue.me/2015/08/usefull.html"/>
+    <id>http://hxue.me/2015/08/usefull.html</id>
+    <published>2015-08-20T05:42:33.000Z</published>
+    <updated>2015-08-20T05:57:49.798Z</updated>
+    <content type="html"><![CDATA[<p><img src="/upload/tank.jpg" alt=""></p>
+<p>上网中经常无意发现一些有趣的技术类网站或者博客，生怕遗忘，特立文记录下来，以备不时之需。</p>
+<a id="more"></a>
+<h2 id="技术类网站、博客"><i class="icon-coffee"></i> 技术类网站、博客</h2><h3 id="轻单_-_发现一个更轻的世界"><a href="https://qdan.me/" target="_blank" rel="external">轻单</a> - 发现一个更轻的世界</h3><blockquote>
+<p>以最便捷的方式分享知识，并瞬间获取他人的经验。</p>
+</blockquote>
+<h3 id="hihocoder_-"><a href="http://hihocoder.com/hiho" target="_blank" rel="external">hihocoder</a> -</h3><blockquote>
+<p>学习算法的好网站，定期举行算法比赛</p>
+</blockquote>
+<hr>
+<h2 id="一些类库"><i class="icon-inbox"></i> 一些类库</h2><h3 id="momentjs_-_日期处理库"><a href="http://momentjs.cn/" target="_blank" rel="external">momentjs</a> - 日期处理库</h3><blockquote>
+<p>momentjs 一个神奇的日期处理库<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//示例代码</span></span><br><span class="line">moment.format(<span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="string">'yyyy-MM-dd HH:mm:ss'</span>); <span class="comment">//2015-08-18 17:15:20</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Font_awesome_-_字体图案"><a href="http://fontawesome.io/icons/" target="_blank" rel="external">Font awesome</a> - 字体图案</h3><blockquote>
+<ul>
+<li>一个字体文件， 249 个图标<br>  一个字体文件包含了所有图标。Font Awesome 助你完整表达web页面上每个动作的含义。</li>
+<li>用CSS控制样式<br>  用CSS能非常容易的改变这些图标的颜色、大小、阴影以及任何CSS能控制的属性。</li>
+<li>….</li>
+<li>哔哩哔哩…… 以上都是官方的话，我只是文字的搬运工，下边给出<a href="http://www.bootcss.com/p/font-awesome/" target="_blank" rel="external">中文网</a>链接</li>
+</ul>
+</blockquote>
+<h3 id="Lodop_-_WEB打印控件"><a href="http://www.lodop.net/demo.html" target="_blank" rel="external">Lodop</a> - WEB打印控件</h3><blockquote>
+<p><code>Lodop</code><em>(标音:劳道谱,俗称:露肚皮)</em>是专业WEB控件,用它既可裁剪输出页面内容，又可用程序代码直接实现复杂打印。控件功能强大,却简单易用,所有调用如同JavaScript扩展语句。</p>
+</blockquote>
+<h2 id="CDN服务">CDN服务</h2><h3 id="-_百度静态资源公共库">- <a href="http://cdn.code.baidu.com/" target="_blank" rel="external">百度静态资源公共库</a></h3>]]></content>
+    <summary type="html">
+    <![CDATA[<p><img src="/upload/tank.jpg" alt=""></p>
+<p>上网中经常无意发现一些有趣的技术类网站或者博客，生怕遗忘，特立文记录下来，以备不时之需。</p>]]>
+    
+    </summary>
+    
+      <category term="技术" scheme="http://hxue.me/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="网站" scheme="http://hxue.me/tags/%E7%BD%91%E7%AB%99/"/>
     
   </entry>
   
