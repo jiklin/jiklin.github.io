@@ -1055,7 +1055,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0629eb;
+  background: #ff9818;
 }
 .sidebar-nav {
   margin: 0;
@@ -2193,4 +2193,55 @@ ul li {
   max-width: 100%;
   width: auto;
   margin: 0;
+}
+.post-more-link a.btn {
+  padding: 1px 10px;
+  border: 1px solid #f89b3b;
+  border-radius: 4px;
+  color: #f89b3b;
+}
+.post-more-link a.btn:hover {
+  border-color: #ffcc90;
+  color: #ffcc90;
+}
+.posts-expand .post-title-link::before {
+  bottom: -5px;
+}
+.post code {
+  border-radius: 2px;
+  background-color: #e7e7e7;
+}
+.with-love {
+  color: #f89b3b;
+}
+.sidebar-nav .sidebar-nav-active {
+  color: #f89b3b;
+  border-bottom-color: #f89b3b;
+}
+.sidebar-nav .sidebar-nav-active:hover {
+  color: #ffcc90;
+  border-bottom-color: #ffcc90;
+}
+.posts-expand .post-tags a[rel='tag'] {
+  background: none;
+  padding: 1px 10px;
+  border: 1px solid #f89b3b;
+  border-radius: 4px;
+  color: #f89b3b;
+}
+.posts-expand .post-tags a[rel='tag']:hover {
+  border-color: #ffcc90;
+  color: #ffcc90;
+}
+.post-toc .nav .active-current > a {
+  color: #f89b3b;
+}
+.links-of-author a:before {
+  background: #f89b3b;
+}
+.page-post-detail .sidebar-toggle-line {
+  background-color: #f89b3b;
+}
+.back-to-top:before {
+  border-bottom-color: #f89b3b;
 }
