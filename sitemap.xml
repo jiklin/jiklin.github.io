@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://hxue.me/404.html</loc>
+    <lastmod>2015-08-28T05:57:48.428Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hxue.me/2015/08/usefull.html</loc>
+    <lastmod>2015-08-28T05:52:34.780Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hxue.me/2015/08/mailto.html</loc>
     <lastmod>2015-08-20T08:47:42.979Z</lastmod>
   </url>
@@ -14,16 +24,6 @@
   <url>
     <loc>http://hxue.me/about/index.html</loc>
     <lastmod>2015-08-20T08:00:10.042Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hxue.me/2015/08/usefull.html</loc>
-    <lastmod>2015-08-20T07:59:40.204Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://hxue.me/404.html</loc>
-    <lastmod>2015-08-20T06:05:32.498Z</lastmod>
   </url>
   
   <url>

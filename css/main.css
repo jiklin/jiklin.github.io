@@ -1055,7 +1055,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9818;
+  background: #ff88d1;
 }
 .sidebar-nav {
   margin: 0;
@@ -2233,6 +2233,14 @@ ul li {
   border-color: #ffcc90;
   color: #ffcc90;
 }
+blockquote {
+  border-left: 4px solid #999;
+}
+.posts-expand .post-body img {
+  padding: 5px;
+  border-radius: 2px;
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.35);
+}
 .post-toc .nav .active-current > a {
   color: #f89b3b;
 }
@@ -2244,4 +2252,8 @@ ul li {
 }
 .back-to-top:before {
   border-bottom-color: #f89b3b;
+}
+.copyright img {
+  display: inline-block;
+  vertical-align: text-bottom;
 }
